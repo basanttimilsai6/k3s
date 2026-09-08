@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: fastpro
+
+spec:
+  replicas: 3
+
+  selector:
+    matchLabels:
+      app: fastpro
+
+  template:
+    metadata:
+      labels:
+        app: fastpro
+
+    spec:
+      containers:
+        - name: fastpro
+          image: YOUR_DOCKERHUB_USERNAME/fastpro:v4.0
+
+          ports:
+            - containerPort: 8000

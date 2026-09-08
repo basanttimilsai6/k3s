@@ -1,7 +1,7 @@
 from fastapi import Depends, FastAPI
 from sqlalchemy.orm import Session
 
-from db import Base, check_connection, engine, get_db
+from fastpro.db import Base, check_connection, engine, get_db
 
 Base.metadata.create_all(bind=engine)
 
