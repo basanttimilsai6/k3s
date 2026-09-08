@@ -15,14 +15,15 @@ spec:
     metadata:
       labels:
         app: fastpro
-    envFrom:
-      - secretRef:
-        name: fastpro-env
 
     spec:
       containers:
         - name: fastpro
-          image: basanttimilsa8/fast-pro
+          image: basanttimilsa8/fast-pro:v6.1
+
+          envFrom:
+            - secretRef:
+                name: fastpro-env
 
           ports:
             - containerPort: 8000
