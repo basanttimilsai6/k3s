@@ -19,7 +19,7 @@ spec:
     spec:
       containers:
         - name: fastpro
-          image: basanttimilsa8/fast-pro:v6.1
+          image: basanttimilsa8/fast-pro:latest
 
           envFrom:
             - secretRef:
