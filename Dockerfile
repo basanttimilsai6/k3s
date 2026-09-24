@@ -1,7 +1,4 @@
 FROM python:3.13-slim
-
-
-
 WORKDIR /app
 
 RUN apt-get update \
@@ -13,7 +10,6 @@ RUN apt-get update \
 
 COPY requirements.txt .
 
-you f
 RUN pip install uv
 
 RUN uv pip install --system --no-cache-dir -r requirements.txt
@@ -21,15 +17,4 @@ RUN uv pip install --system --no-cache-dir -r requirements.txt
 COPY . .
 
 EXPOSE 8000
-
-
-
-
-
-
-
-
-
-
-
 CMD ["uvicorn", "fastpro.main:app", "--host", "0.0.0.0", "--port", "8000"]
