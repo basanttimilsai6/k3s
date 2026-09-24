@@ -6,20 +6,14 @@ WORKDIR /app
 
 RUN apt-get update \
     && apt-get install -y --no-install-recommends \
-        gcc \
-        libc6-dev \
-        libpq-dev \
+    gcc \
+    libc6-dev \
+    libpq-dev \
     && rm -rf /var/lib/apt/lists/*
 
 COPY requirements.txt .
 
-jhahahha
-kjasdhsjkdbn
-
-dsajkdfhwsdn
-
 you f
-
 RUN pip install uv
 
 RUN uv pip install --system --no-cache-dir -r requirements.txt
