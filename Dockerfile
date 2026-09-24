@@ -13,6 +13,12 @@ RUN apt-get update \
 
 COPY requirements.txt .
 
+jhahahha
+kjasdhsjkdbn
+
+dsajkdfhwsdn
+
+
 RUN pip install uv
 
 RUN uv pip install --system --no-cache-dir -r requirements.txt
